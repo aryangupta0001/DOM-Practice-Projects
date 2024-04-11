@@ -1,14 +1,15 @@
 const operators = ["+", "-", "*", "/", "%"];
 
+const input = document.getElementById("input");
 zero.addEventListener("click", () => {
   // if the input box is not empty
   if (input.innerText) {
-    input.innerText += "0";
+    input.value += "0";
   }
 });
 
 one.addEventListener("click", () => {
-  input.innerText += 1;
+  input.value += 1;
 });
 
 two.addEventListener("click", () => {
@@ -96,12 +97,12 @@ square.addEventListener("click", () => {
   }
 });
 
-squareroot.addEventListener("click", () => {
-  if (input.innerText) {
-    if (!operators.includes(input.innerText[input.innerText.length - 1]))
-      result.innerText = Math.sqrt(input.innerText);
-  }
-})
+// squareroot.addEventListener("click", () => {
+//   if (input.innerText) {
+//     if (!operators.includes(input.innerText[input.innerText.length - 1]))
+//       result.innerText = Math.sqrt(input.innerText);
+//   }
+// })
 
 clearResult.addEventListener("click", () => {
   // clear the result field
